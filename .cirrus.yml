@@ -1,15 +1,15 @@
 env:
-  RCLONECONFIG_DRIVE: "ENCRYPTED[75f8315cb76f92058ed16b6c7f10fa791852aefb211e35e7042a1bd875a06c676dc5e0f85e616b3033ba2ddd25e71b9c]"
-  TG_TOKEN: "ENCRYPTED[e65eea567a2b6f6b13d70a689f09786e5ce19d03f5cce4e6a98ca210fca09ab3d59e46c6eae3a7971f2051629d012708]"
-  TG_CHAT_ID: "ENCRYPTED[6d4ef793f96a1d28d641983a5f3a54288790f59eb799c1f17d4abc3fc7fe21289ea69eaf98b5b0c340a2b14164d19cb1]"
+  RCLONECONFIG_DRIVE: "ENCRYPTED[!78cacf7c116d0fa03555d7bb414aaae023d38052281d25b96524fa4d8f2f27cef3576c114f77e5e0e7a80b1f7c81679c!]"
+  TG_TOKEN: "ENCRYPTED[!60645923fc1fd55fd4481d0b8f7456c5d9e1abdd9f12795c9ae98081f6f5d7fb9e9e83e39f5dba885d40c1430cffc230!]"
+  TG_CHAT_ID: "ENCRYPTED[!b45255fcf57217190786ea03c7b5914c1ce188009f24f80a9f188c526b46c0e52320e03552d9d9cfb2e8f6efc757581c!]"
   WORKDIR: "/tmp"
-  EMAIL: "ENCRYPTED[7aa6306c1cc6aac701306254f2e242a05d9e9d02af964d21fd9ec9da6090b162673e122ef52f2db17a8b6beeffa35191]"
+  EMAIL: "ENCRYPTED[!8c99087d299dceb4b74fe80d5732c0163b03e2b2dfb496f3b7efc763e9b054c26b691cdb0a35148d9558c16362d7302f!]"
   CIRRUS_CLONE_DEPTH: "1"
-  credentials: "ENCRYPTED[2e599fd6315b53b121f3846b68784458de7a3bcd7229ae6287fa8e561fb66d5471eff340ee848090fe5ae9a2b28754df]"
+  credentials: "ENCRYPTED[!d73137109fe350b5bb8ceb974c71ded5c6f633c1200e2a97e55144dfe085facb710ce0df16282b6621e8e06a5b541e73!]"
 
 task:
   name: "Setting Up, Syncing, Building and Uploading"
-  only_if: $CIRRUS_REPO_OWNER == 'Tiktodz'
+  only_if: $CIRRUS_REPO_OWNER == 'Monu'
   timeout_in: 120m
   container:
     image: anggit86/ubuntu:22.04
@@ -20,7 +20,7 @@ task:
      - ./script/load_ccache.sh
 
   Sync-rom_script:
-     - git config --global user.name "Tiktodz"
+     - git config --global user.name "Monu"
      - git config --global user.email "$EMAIL"
      - echo "$credentials" > ~/.git-credentials
      - git config --global credential.helper store --file=~/.git-credentials
@@ -36,3 +36,4 @@ task:
 
   Upload-build_script:
      - ./script/ziping.sh
+
