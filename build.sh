@@ -9,5 +9,5 @@ lunch lineage_X00TD-userdebug
 export TZ=Asia/Jakarta
 #export SKIP_API_CHECKS=true
 #export SELINUX_IGNORE_NEVERALLOWS=true
-mka bacon -j8
+make bacon -j8
 # end
