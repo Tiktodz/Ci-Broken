@@ -9,5 +9,5 @@ lunch banana_X00TD-userdebug
 export TZ=Asia/Jakarta
 #export SKIP_API_CHECKS=true
 #export SELINUX_IGNORE_NEVERALLOWS=true
-m banana -j8
+mka bacon -j8
 # end
