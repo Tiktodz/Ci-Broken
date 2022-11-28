@@ -8,6 +8,6 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 lunch dot_X00TD-userdebug
 export TZ=Asia/Jakarta
 #export SKIP_API_CHECKS=true
-#export SELINUX_IGNORE_NEVERALLOWS=true
+export SELINUX_IGNORE_NEVERALLOWS=true
 make bacon -j8
 # end
