@@ -56,7 +56,7 @@ echo -e \
 <b>📘 SHA1 :-</b> <code>"$(sha1sum *zip | cut -d' ' -f1)"</code>
 ━━━━━━━━━ஜ۩۞۩ஜ━━━━━━━━
 
-<b>🙇 Maintainer: Kneba</b>
+<b>🙇 Maintainer: "$CIRRUS_REPO_OWNER"</b>
 
 " > tg.html
 TG_TEXT=$(< tg.html)
