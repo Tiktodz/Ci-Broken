@@ -9,5 +9,5 @@ lunch arrow_X00TD-userdebug
 export TZ=Asia/Jakarta
 #export SKIP_API_CHECKS=true
 #export SELINUX_IGNORE_NEVERALLOWS=true
-m bacon-j8
+m bacon -j8
 # end
