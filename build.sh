@@ -9,5 +9,5 @@ lunch xdroid_X00TD-userdebug
 export TZ=Asia/Jakarta
 #export SKIP_API_CHECKS=true
 #export SELINUX_IGNORE_NEVERALLOWS=true
-make bacon -j8
+make xd -j8
 # end
